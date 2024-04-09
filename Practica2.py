@@ -17,5 +17,6 @@ for i in range(len(names)):
         "Goles_evitados" : goals_avoided[i],
         "Asistencias" : assists[i]
     }
+print(2)
 
 
