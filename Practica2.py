@@ -1,3 +1,4 @@
+import Calculos
 names = """ Agustin, Yanina, Andrés, Ariadna, Bautista, CAROLINA,
 CESAR, David, Diego, Dolores, DYLAN, ELIANA, Emanuel, Fabián, Noelia,
 Francsica', FEDERICO, Fernanda, GONZALO, Nancy """
@@ -9,7 +10,6 @@ assists = [0, 5, 1, 0, 5, 2, 0, 0, 1, 2, 1, 5, 5, 0, 1, 0, 2, 3, 1,
 0]
 
 names = [name.strip() for name in names.split(",")]
-print(names)
 diccionario_datos={}
 for i in range(len(names)):
     diccionario_datos[names[i]] = {
@@ -17,6 +17,10 @@ for i in range(len(names)):
         "Goles_evitados" : goals_avoided[i],
         "Asistencias" : assists[i]
     }
-print(2)
+Calculos.maximo_goleador(diccionario_datos)
+Calculos.jugador_mas_influyente(diccionario_datos)
+Calculos.promedio_goles(diccionario_datos)
+Calculos.promedio_goles_mas_influyente(diccionario_datos)
+
 
 
