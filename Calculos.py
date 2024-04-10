@@ -5,9 +5,7 @@ def maximo_goleador(datos):
         if (datos[jugador]["Goles_favor"] > maximo_goles):
             maximo_goles=datos[jugador]["Goles_favor"]
             max_goleador=jugador
-
-    print("La mayor cantidad de goles es", maximo_goles, "de" , max_goleador)
-    return (max_goleador)
+    return (max_goleador,maximo_goles)
 
 def jugador_mas_influyente(datos):
     mas_influyente=""
@@ -27,8 +25,9 @@ def promedio_goles(datos):
     print ("El promedio de goles es", goles/25, "goles por partido.")
 
 def promedio_goles_mas_influyente(datos):
-    goles_goleador = datos[maximo_goleador(datos)]["Goles_favor"]
-    print ("El promedio de goles del goleador", maximo_goleador(datos), "es", goles_goleador/25, "goles.")
+    goleador,goles=maximo_goleador(datos)
+    goles_goleador = datos[goleador]["Goles_favor"]
+    print ("El promedio de goles del goleador", goleador, "es", goles_goleador/25, "goles.")
 
     
 

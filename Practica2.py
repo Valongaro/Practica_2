@@ -17,7 +17,8 @@ for i in range(len(names)):
         "Goles_evitados" : goals_avoided[i],
         "Asistencias" : assists[i]
     }
-Calculos.maximo_goleador(diccionario_datos)
+Goleador,goles = Calculos.maximo_goleador(diccionario_datos)
+print("El maximo goleador es", Goleador, "con", goles, "goles.")
 Calculos.jugador_mas_influyente(diccionario_datos)
 Calculos.promedio_goles(diccionario_datos)
 Calculos.promedio_goles_mas_influyente(diccionario_datos)
